@@ -15,3 +15,8 @@ $(PREF_BIN)%.o : $(PREF_SRC)%.cpp
 
 clean : 
 	rm $(TARGET) $(PREF_BIN)*.o
+
+$(BIN) : | $(PREF_BIN)
+
+$(PREF_BIN) :
+	mkdir $(PREF_BIN)
