@@ -14,7 +14,7 @@ $(PREF_BIN)%.o : $(PREF_SRC)%.cpp
 	$(COMPILER) -c $< -o $@
 
 clean : 
-	rm $(TARGET) $(PREF_BIN)*.o
+	rm -r $(TARGET) $(PREF_BIN)
 
 $(BIN) : | $(PREF_BIN)
 
